@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "start:dev":"cross-env NODE_ENV=development nodemon ./src/app.js",
-    "start:prod": "cross-env NODE_ENV=development nodemon ./src/app.js",
-    "start:test":"cross-env NODE_ENV=development nodemon .s/src/app.js",
+    "start:prod": "cross-env NODE_ENV=prod nodemon ./src/app.js",
+    "start:test":"cross-env NODE_ENV=test nodemon .s/src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -14,9 +14,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.listen(env.PORT, () => {
-  displayRoutes(app);
   // eslint-disable-next-line no-console
-  console.log(`Encendido servidor en puerto ${env.PORT} \n http://localhost:${env.PORT}/`);
+  console.log(`=Encendido servidor en puerto ${env.PORT}= \n====== http://localhost:${env.PORT}/ =====`);
+  // eslint-disable-next-line no-console
+  console.log(`==========ENV:${env.NODE_ENV}==========`);
+  // eslint-disable-next-line no-console
+  console.log('===============^^^^^===============');
+  displayRoutes(app);
 });
 
 app.get('/', (req, res) => {

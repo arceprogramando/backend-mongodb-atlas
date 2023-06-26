@@ -4,9 +4,8 @@ import displayRoutes from 'express-routemap';
 import __dirname from './utils.js';
 import configObject from './config/config.js';
 
-const env = configObject;
-console.log(env)
 const app = express();
+const env = configObject;
 
 app.use(cors());
 

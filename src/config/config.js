@@ -1,13 +1,13 @@
 import { config } from 'dotenv';
 
 config({
-  path: `.env.${process.env.NODE_ENV || 'development'}`,
+  path: `.env.${process.env.NODE_ENV || 'development'}.local`,
 });
 
 const {
-  API_VERSION,
   NODE_ENV,
   PORT,
+  API_VERSION,
   ORIGIN,
   DB_CNN,
   DB_HOST,
@@ -17,9 +17,9 @@ const {
 } = process.env;
 
 const configObject = {
-  API_VERSION,
   NODE_ENV,
   PORT,
+  API_VERSION,
   ORIGIN,
   DB_CNN,
   DB_HOST,

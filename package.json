@@ -13,8 +13,10 @@
   "author": "Felipe Arce",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "dotenv": "^16.3.1"
+    "express-routemap": "^1.6.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

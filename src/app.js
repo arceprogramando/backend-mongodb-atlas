@@ -2,7 +2,10 @@ import express from 'express';
 import cors from 'cors';
 import displayRoutes from 'express-routemap';
 import __dirname from './utils.js';
+import configObject from './config/config.js';
 
+const env = configObject;
+console.log(env)
 const app = express();
 
 app.use(cors());
@@ -11,12 +14,10 @@ app.use(express.static(`${__dirname}/public`));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.set('port', 8080);
-
-app.listen(app.get('port'), () => {
+app.listen(env.PORT, () => {
   displayRoutes(app);
   // eslint-disable-next-line no-console
-  console.log(`Encendido servidor en puerto ${app.get('port')} \n http://localhost:${app.get('port')}/`);
+  console.log(`Encendido servidor en puerto ${env.PORT} \n http://localhost:${env.PORT}/`);
 });
 
 app.get('/', (req, res) => {

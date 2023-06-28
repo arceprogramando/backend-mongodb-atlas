@@ -14,12 +14,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const PORT = env.PORT || 8080;
+const NODE_ENV = env.NODE_ENV || 'development';
+
+// const url = env.DB_CNN ?? `mongodb://${env.DB_HOST}:${env.DB_PORT}/${env.DB_NAME}`;
+// console.log(url);
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
   console.log(`=Encendido servidor en puerto ${PORT}= \n====== http://localhost:${PORT}/ =====`);
   // eslint-disable-next-line no-console
-  console.log(`==========ENV:${env.NODE_ENV}==========`);
+  console.log(`==========ENV:${NODE_ENV}==========`);
   // eslint-disable-next-line no-console
   console.log('===============^^^^^===============');
   displayRoutes(app);

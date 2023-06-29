@@ -3,7 +3,8 @@ import productModel from '../models/products.models.js';
 
 const router = Router();
 
-router.get('/', async (req, res) => {
+// Lectura
+router.get('/api/products', async (req, res) => {
   try {
     const products = await productModel.find();
     res.send({ result: 'success', payload: products });

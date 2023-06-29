@@ -1,4 +1,4 @@
-import { connect } from 'mongoose';
+import mongoose from 'mongoose';
 import configObject from '../config/config.js';
 
 const env = configObject;
@@ -11,17 +11,19 @@ const configConnection = {
   },
 };
 
-const mongoDBconnection = async () => {
+const mongoDBConnection = async () => {
   try {
-    await connect(configConnection.url, configConnection.options);
+    // eslint-disable-next-line no-console
+    console.log(configConnection.url);
+    await mongoose.connect(configConnection.url, configConnection.options);
     // eslint-disable-next-line no-console
     console.log(
       `======= URL: ${configConnection.url.substring(0, 20)} =======`,
     );
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.log('🚀 ~ file: mongo.config.js:22 ~ mongoDBConnection ~ err:', error);
+  // eslint-disable-next-line no-console
+    console.log(`🚀 ~ file: mongo.config.js:23 ~ mongoDBConnection ~ err:, ${error}`);
   }
 };
 
-export default mongoDBconnection;
+export default mongoDBConnection;

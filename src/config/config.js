@@ -5,29 +5,19 @@ config({
 });
 
 const {
-  NODE_ENV,
+  DB_PORT,
   PORT,
-  API_VERSION,
-  ORIGIN,
   DB_CNN,
   DB_HOST,
   DB_NAME,
-  DB_PORT,
-  DB_USER,
-  DB_PASSWORD,
 } = process.env;
 
 const configObject = {
-  NODE_ENV,
+  DB_PORT,
   PORT,
-  API_VERSION,
-  ORIGIN,
   DB_CNN,
   DB_HOST,
   DB_NAME,
-  DB_PORT,
-  DB_USER,
-  DB_PASSWORD,
 };
 
 export default configObject;

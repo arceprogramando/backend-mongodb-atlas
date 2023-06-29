@@ -3,10 +3,12 @@ import cors from 'cors';
 import displayRoutes from 'express-routemap';
 import __dirname from './utils.js';
 import configObject from './config/config.js';
+import mongoDBConnection from './db/mongo.config.js';
+import productsroutes from './routes/products.routes.js';
 
 const app = express();
 const env = configObject;
-
+// Middlewares
 app.use(cors());
 
 app.use(express.static(`${__dirname}/public`));
@@ -15,9 +17,6 @@ app.use(express.urlencoded({ extended: true }));
 
 const PORT = env.PORT || 8080;
 const NODE_ENV = env.NODE_ENV || 'development';
-
-// const url = env.DB_CNN ?? `mongodb://${env.DB_HOST}:${env.DB_PORT}/${env.DB_NAME}`;
-// console.log(url);
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
@@ -29,6 +28,6 @@ app.listen(PORT, () => {
   displayRoutes(app);
 });
 
-app.get('/', (req, res) => {
-  res.send('hola');
-});
+mongoDBConnection();
+
+app.use('/api/products', productsroutes);

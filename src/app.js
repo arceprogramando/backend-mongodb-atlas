@@ -29,6 +29,6 @@ app.listen(PORT, () => {
   displayRoutes(app);
 });
 
-app.get('/Hola', (req, res) => {
+app.get('/', (req, res) => {
   res.send('hola');
 });

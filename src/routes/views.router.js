@@ -6,7 +6,10 @@ const router = Router();
 const { PORT } = configObject;
 
 router.get('/', async (req, res) => {
-  const products = await productModel.find();
+  const findproducts = await productModel.find();
+  const products = findproducts.map((product) => product.toObject());
+  // eslint-disable-next-line no-console
+  console.log(products);
   res.render('home', {
     products,
     style: 'index.css',
@@ -16,7 +19,8 @@ router.get('/', async (req, res) => {
 
 router.get('/realtimeproducts', async (req, res) => {
   try {
-    const products = await productModel.find();
+    const findproducts = await productModel.find();
+    const products = findproducts.map((product) => product.toObject());
     // Aqui envio mis products
     res.render('realTimeProducts', {
       products,

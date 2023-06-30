@@ -1,10 +1,12 @@
 import mongoose from 'mongoose';
 import configObject from '../config/config.js';
 
-const env = configObject;
+const {
+  DB_CNN, DB_HOST, DB_PORT, DB_NAME,
+} = configObject;
 
 const configConnection = {
-  url: env.DB_CNN ?? `mongodb://${env.DB_HOST}:${env.DB_PORT}/${env.DB_NAME}`,
+  url: `${DB_CNN}${DB_NAME}` ?? `mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`,
   options: {
     useNewUrlParser: true,
     useUnifiedTopology: true,

@@ -1,4 +1,4 @@
-# Primera Practica Integradora
+# Primera Practica Integradora (no finalizado)
 ## _Felipe Antonio Aleman Arce_
 ### Ejercicio 6 entregable , Primera Practica Integradora
 [![Coderhouse](https://res.cloudinary.com/hdsqazxtw/image/upload/v1570710978/coderhouse.jpg)](https://github.com/arceprogramando)

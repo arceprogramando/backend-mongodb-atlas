@@ -67,6 +67,7 @@ Para realizar este Ejercicio
 Mi repositorio publico es  [arceprogramando][arceprogramando]
 en github.
 - [mongoose] - Utilizo mongoose para trabajar las rutas de mi mongo atlas , y pasar mi filesistem a una base de datos
+- [eslint] - Estoy usando eslint como dependencia de desarrollo
 
 ## Installation
 
@@ -136,3 +137,4 @@ http://localhost:8080/products/:id
   [socket.io]:<https://socket.io/docs/v4/>
   [sweetalert2]:<https://sweetalert2.github.io/v10.html>
   [mongoose]:<https://www.npmjs.com/package/mongoose>
+  [eslint]:<https://eslint.org>

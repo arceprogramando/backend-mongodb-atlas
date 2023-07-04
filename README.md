@@ -68,25 +68,51 @@ Mi repositorio publico es  [arceprogramando][arceprogramando]
 en github.
 - [mongoose] - Utilizo mongoose para trabajar las rutas de mi mongo atlas , y pasar mi filesistem a una base de datos
 - [eslint] - Estoy usando eslint como dependencia de desarrollo
-
+- [cors] - Para que funcione como middleware que especifica los origenes permitidos, como servicios externos(no se tanto su funcionamiento)
 ## Installation
 
 Express and nodemon requires [Node.js](https://nodejs.org/) to run.
 
 Primero instalamos de [Node.js](https://nodejs.org/)  su pagina oficial.
 
+Inicializamos el proyecto 
+
 ```sh
 npm i
 
 ```
 
-Segundo instalamos de [Nodemon](https://nodemon.io) 
+Para hacer el proyecto fui por los siguientes pasos 
+
+
+Primero instale de [Nodemon](https://nodemon.io) 
 Yo lo instale como dependencia de desarrollo
 
 ```sh
 npm install nodemon -D
 
 ```
+
+### Todos los paquetes en 1 
+```sh
+npm install cors dotenv express express-handlebars express-routemap mongoose multer socket.io
+
+npm install crossenv nodemon -D
+
+npm init @eslint/config
+
+```
+
+### Fin de todos los paquetes en 1 
+
+Segundo instale [eslint](https://eslint.org) 
+para una mejor escritura de mi codigo siguiendo la practica de el modelo de airbnb tambien se instalo como dependencia de desarrollo
+
+```sh
+npm init @eslint/config
+
+```
+
 
 Tercero instalamos [express](http://expressjs.com)
 
@@ -99,26 +125,59 @@ Cuarto agregamos a nuestro package.json
 
 ```sh
 "type": "module",
+
 ```
-Quinto instalamos multer
+
+Quinto instalamos [multer](https://www.npmjs.com/package/multer)
 
 ```sh
 npm install multer
-```
 
-Sexto instalamos express-hamdlebars
+```
+Sexto instalamos [socket.io](https://socket.io) para manejar los websocket entre cliente-servidor(aun no le se tanto)
+
+
+Septimo instalamos [express-hamdlebars](https://www.npmjs.com/package/express-handlebars)
 
 ```sh
 npm install express-handlebars
+
 ```
-Septimo instalamos mongoose 
+
+Octavo instalamos mongoose 
 
 ```sh
 npm install mongoose
+
 ```
+
+Noveno instalamos [cross-env](https://www.npmjs.com/package/cross-env) ejecutar scripts que establecen y utilizan variables de entorno en diferentes plataformas
 
 
 ```sh
+npm install cross-env
+
+```
+
+Decimo instalamos [dotenv](https://www.npmjs.com/package/dotenv) para cargar variables de entorno desde archivos de configuración locales.
+
+
+```sh
+npm install dotenv
+
+```
+
+Onceavo instalamos [express-routemap](https://www.npmjs.com/package/express-routemap) para poder mapear nuestro conjunto de rutas a utilizar o en uso
+
+
+```sh
+npm install express-routemap
+
+```
+
+
+
+```
 http://localhost:8080/
 http://localhost:8080/products
 [http://localhost:8080/products?limit=n]
@@ -138,3 +197,7 @@ http://localhost:8080/products/:id
   [sweetalert2]:<https://sweetalert2.github.io/v10.html>
   [mongoose]:<https://www.npmjs.com/package/mongoose>
   [eslint]:<https://eslint.org>
+  [cors]:<https://www.npmjs.com/package/cors>
+  [dotenv]:<https://www.npmjs.com/package/dotenv>
+  [cross-env]:<https://www.npmjs.com/package/cross-env>
+  [express-routemap]:<https://www.npmjs.com/package/express-routemap>

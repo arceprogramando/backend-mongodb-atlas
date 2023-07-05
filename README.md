@@ -1,4 +1,4 @@
-# Primera Practica Integradora (no finalizado)
+# Primera Practica Integradora
 ## _Felipe Antonio Aleman Arce_
 ### Ejercicio 6 entregable , Primera Practica Integradora
 [![Coderhouse](https://res.cloudinary.com/hdsqazxtw/image/upload/v1570710978/coderhouse.jpg)](https://github.com/arceprogramando)
@@ -36,15 +36,16 @@ Estoy haciendo esto para poder tener un ejemplo de como hacer un readme a la hor
 - Uso de sweetalert✔️
 - Si se desea hacer la conexión de socket emits con HTTP, deberás buscar la forma de utilizar el servidor io de Sockets dentro de la petición POST. ¿Cómo utilizarás un emit dentro del POST?(sin terminar)
 - (Nos encontramos Aca)
+
 - Continuar sobre el proyecto que has trabajado para tu ecommerce y configurar los siguientes elementos:
-- Agregar el modelo de persistencia de Mongo y mongoose a tu proyecto.
-- Crear una base de datos llamada “ecommerce” dentro de tu Atlas, crear sus colecciones “carts”, “messages”, “products” y sus respectivos schemas.
+- Agregar el modelo de persistencia de Mongo y mongoose a tu proyecto. ✔️
+- Crear una base de datos llamada “ecommerce” dentro de tu Atlas, crear sus colecciones “carts”, “messages”, “products” y sus respectivos schemas.❓ (falta crear schemas de message y carts) ✔️
 - Separar los Managers de fileSystem de los managers de MongoDb en una sola carpeta “dao”. Dentro de dao, agregar también una carpeta “models” donde vivirán los esquemas de MongoDB. La estructura deberá ser igual a la vista en esta clase
-Contener todos los Managers (FileSystem y DB) en una carpeta llamada “Dao”
+Contener todos los Managers (FileSystem y DB) en una carpeta llamada “Dao” ✔️
 - Reajustar los servicios con el fin de que puedan funcionar con Mongoose en lugar de FileSystem ✔️
 - NO ELIMINAR FileSystem de tu proyecto. ✔️
 - Implementar una vista nueva en handlebars llamada chat.handlebars, la cual permita implementar un chat como el visto en clase. Los mensajes deberán guardarse en una colección “messages” en mongo (no es necesario implementarlo en FileSystem). El formato es:  {user:correoDelUsuario, message: mensaje del usuario}
-- Corroborar la integridad del proyecto para que todo funcione como lo ha hecho hasta ahora.
+- Corroborar la integridad del proyecto para que todo funcione como lo ha hecho hasta ahora.❓ (Falta crear)
 
 > Espero que Los ejercicios se encuentren
 > resueltos de buena forma y espero 
@@ -52,6 +53,8 @@ Contener todos los Managers (FileSystem y DB) en una carpeta llamada “Dao”
 
 
 ## Herramientas
+Mi repositorio publico es  [arceprogramando][arceprogramando]
+en github.
 
 Para realizar este Ejercicio
 
@@ -59,16 +62,17 @@ Para realizar este Ejercicio
 - [node.js] - Se uso Node Js
 - [Express] - Se uso la libreria Express de Node
 - [Multer] - Se instalo multer para poder manejar archivo de imagen
-- [Nodemon] - Se instalo globalmente Nodemon
-- [Nodemon] - Se instalo como paquete de desarrollo 
+- [Nodemon] - Se instalo globalmente Nodemon Se instalo como paquete de desarrollo 
 - [express-handlebars] - Se instalo el motor de plantillas express-handlebars
 - [socket.io] - Se instalo socket.io para trabajar con websocket dentro de nuestro servidor
 - [sweetalert2] - Importo desde de su CDN link 
-Mi repositorio publico es  [arceprogramando][arceprogramando]
-en github.
 - [mongoose] - Utilizo mongoose para trabajar las rutas de mi mongo atlas , y pasar mi filesistem a una base de datos
 - [eslint] - Estoy usando eslint como dependencia de desarrollo
 - [cors] - Para que funcione como middleware que especifica los origenes permitidos, como servicios externos(no se tanto su funcionamiento)
+- [bootstrap] - Para poder hacer mi representacion en handlebars un poco mas atractiva
+- [cross-env] - Para ejecutar scripts que establecen y utilizan variables de entorno en diferentes plataformas
+- [dotenv] - para cargar variables de entorno desde archivos de configuración locales.
+
 ## Installation
 
 Express and nodemon requires [Node.js](https://nodejs.org/) to run.
@@ -201,3 +205,4 @@ http://localhost:8080/products/:id
   [dotenv]:<https://www.npmjs.com/package/dotenv>
   [cross-env]:<https://www.npmjs.com/package/cross-env>
   [express-routemap]:<https://www.npmjs.com/package/express-routemap>
+  [bootstrap]:<https://getbootstrap.com>

@@ -1,9 +1,9 @@
 // Cliente
+import { Socket } from 'socket.io';
 
-// eslint-disable-next-line no-undef
-const socket = io();
+const io = Socket();
 
-socket.emit('message', '!Hola, me estoy conectando desde un el cliente');
+io.emit('message', '!Hola, me estoy conectando desde un el cliente');
 
 document.getElementById('noteForm').addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -21,7 +21,7 @@ document.getElementById('noteForm').addEventListener('submit', async (e) => {
     if (response.ok) {
       const data = await response.json();
 
-      socket.emit('nuevoProducto', data);
+      io.emit('nuevoProducto', data);
 
       form.reset();
 

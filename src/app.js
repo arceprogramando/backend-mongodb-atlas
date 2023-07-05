@@ -10,6 +10,8 @@ import __dirname from './utils.js';
 import viewsRouter from './routes/views.router.js';
 import productRouter from './routes/products.routes.js';
 import mongoDBConnection from './dao/db/config/mongo.config.js';
+import cartRouter from './routes/carts.routes.js';
+import messageRouter from './routes/message.routes.js';
 
 const app = express();
 const env = configObject;
@@ -42,6 +44,8 @@ mongoDBConnection();
 
 app.use('/', viewsRouter);
 app.use('/', productRouter);
+app.use('/', cartRouter);
+app.use('/', messageRouter);
 
 const io = new Server(server);
 

@@ -136,7 +136,6 @@ router.put('/api/products/:pid', uploadMiddleware, async (req, res) => {
 
 // Borrar Delete (C.R.U."D")
 
-// Borrar Delete (C.R.U."D")
 router.delete('/api/products/:pid', async (req, res) => {
   try {
     const { pid } = req.params;

@@ -17,7 +17,7 @@ const productsSchema = new mongoose.Schema({
   stock: Number,
   category: String,
   thumbnails: String,
-}, { versionKey: false });
+});
 
 const productModel = mongoose.model(productsCollection, productsSchema);
 
